@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログインアプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen" class="screen">
+            <div class="login-form">
+                <h1>ログイン</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">ユーザー名:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">パスワード:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">ログイン</button>
+                </form>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </div>
+        
+        <div id="success-screen" class="screen hidden">
+            <div class="success-content">
+                <h1>ログイン成功！</h1>
+                <p>ようこそ、<span id="welcome-username"></span>さん！</p>
+                <button id="logout-btn">ログアウト</button>
+                
+                <div class="error-test-section">
+                    <h2>エラーテスト</h2>
+                    <p>RUMでのJavaScriptエラー検証用:</p>
+                    <button id="error-btn-1" class="error-btn">TypeError発生</button>
+                    <button id="error-btn-2" class="error-btn">ReferenceError発生</button>
+                    <button id="error-btn-3" class="error-btn">カスタムエラー発生</button>
+                    <button id="error-btn-4" class="error-btn">Promise reject</button>
+                    <button id="error-btn-5" class="error-btn">非同期エラー</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
